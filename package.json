@@ -1,6 +1,6 @@
 {
   "name": "web-did-resolver",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "description": "Resolve DID documents from an https domain",
   "type": "module",
   "source": "src/resolver.ts",
@@ -27,7 +27,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:decentralized-identity/web-did-resolver.git"
+    "url": "git@github.com:inevolin/web-did-resolver.git"
   },
   "dependencies": {
     "cross-fetch": "^3.1.5",
