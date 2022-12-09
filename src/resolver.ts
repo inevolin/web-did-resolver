@@ -24,7 +24,6 @@ export function getResolver(): Record<string, DIDResolver> {
 
     const url = path.startsWith('localhost') ? `http://${path}` : `https://${path}`
 
-
     const didDocumentMetadata = {}
     let didDocument: DIDDocument | null = null
 
