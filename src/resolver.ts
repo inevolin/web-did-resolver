@@ -20,7 +20,7 @@ export function getResolver(): Record<string, DIDResolver> {
     if (id.length > 1) {
       path = id.map(decodeURIComponent).join('/') + '/did.json'
     }
-    path = path.replace(/localhost\/(\d+)/, 'localhost%3A$1')
+    path = path.replace(/localhost\/(\d+)/, 'localhost:$1')
 
     const url = path.startsWith('localhost') ? `http://${path}` : `https://${path}`
 
