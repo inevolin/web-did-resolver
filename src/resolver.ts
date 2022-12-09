@@ -16,11 +16,11 @@ export function getResolver(): Record<string, DIDResolver> {
   async function resolve(did: string, parsed: ParsedDID): Promise<DIDResolutionResult> {
     let err = null
     let path = decodeURIComponent(parsed.id) + DOC_PATH
-    path = path.replace(/localhost:(\d+)/, 'localhost%3A$1')
     const id = parsed.id.split(':')
     if (id.length > 1) {
       path = id.map(decodeURIComponent).join('/') + '/did.json'
     }
+    path = path.replace(/localhost\/(\d+)/, 'localhost%3A$1')
 
     const url = path.startsWith('localhost') ? `http://${path}` : `https://${path}`
 
