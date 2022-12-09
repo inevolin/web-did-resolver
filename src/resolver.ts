@@ -21,7 +21,7 @@ export function getResolver(): Record<string, DIDResolver> {
       path = id.map(decodeURIComponent).join('/') + '/did.json'
     }
 
-    const url = `https://${path}`
+    const url = path.startsWith('localhost') ? `http://${path}` : `https://${path}`;
 
     const didDocumentMetadata = {}
     let didDocument: DIDDocument | null = null
